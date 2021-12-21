@@ -28,7 +28,7 @@ CALCULATE_TIMESERIES_QUERY = """
 """
 
 GET_POSTAL_CODES_GEOM_QUERY = """
-    select pc.id,pc.code,ST_AsWKB(pc.the_geom) as geom, coalesce(stats.total,0) as total
+    select pc.id,pc.code,ST_AsText(pc.the_geom) as geom, coalesce(stats.total,0) as total
     from postal_codes pc
     left join (
         SELECT ps.postal_code_id as codeid, sum(ps.amount) as total 
