@@ -20,7 +20,7 @@ You have the following options to run this API:
     cd coolGeoApp
     docker-compose up -d --build
 ```
-### 2. Using images from Docker Hub
+### 2. Using images from Docker Hub (Not available yet)
 
 * Run database container 
   
