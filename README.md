@@ -20,7 +20,7 @@ You have the following options to run this API:
     cd coolGeoApp
     docker-compose up -d --build
 ```
-### 2. Images from Docker hub
+### 2. Using images from Docker Hub
 
 * Run database container 
   
@@ -35,8 +35,8 @@ You have the following options to run this API:
 
 ## Usage
 
-When the two docker containers are running (API server and spatial database) you can go to your favorite browser and write [http://localhost:8000/docs](http://localhost:8000/docs).
-This link shows the [Swagger UI](https://swagger.io/) of the API, where you can see all the available endpoints of the API and you can test all of them.  
+When the two docker containers (API server and spatial database) are running you can go to your favorite browser and write [http://localhost:8000/docs](http://localhost:8000/docs) or [http://localhost:8000/redoc](http://localhost:8000/redoc).
+This link shows the API [Swagger UI](https://swagger.io/), where you can see all the available endpoints of the API and you can test all of them.  
 
 ## Improvements
 Cache with Redis
