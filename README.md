@@ -11,15 +11,16 @@ Both components, server with API and database, are available as images of [Docke
 
 You need **Docker engine** and **Docker compose** installed in your computed to run the CoolGeoApp API. If you don't have docker installed, please check this [link](https://docs.docker.com/engine/install/).
 
+You have the following options to run this API:
 
-
-### Downloading source code
+### 1. Downloading source code
 
 ```bash
+    git clone https://github.com/visancal/coolGeoApp.git
     cd coolGeoApp
     docker-compose up -d --build
 ```
-### Images from Docker hub
+### 2. Images from Docker hub
 
 * Run database container 
   
