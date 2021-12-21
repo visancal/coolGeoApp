@@ -11,23 +11,25 @@ Both components, server with API and database, are available as images of [Docke
 
 You need **Docker engine** and **Docker compose** installed in your computed to run the CoolGeoApp API. If you don't have docker installed, please check this [link](https://docs.docker.com/engine/install/).
 
+
+
 ### Downloading source code
 
 ```bash
-    sudo docker-compose up -d --build
-    sudo docker-compose up 
+    cd coolGeoApp
+    docker-compose up -d --build
 ```
 ### Images from Docker hub
 
 * Run database container 
   
 ```bash
-docker run visancal/coolgeoapp:db
+    docker run -d -p 5432:5432 visancal/coolgeoapp:db
 ```
 * Run server container
   
 ```bash
-docker run visancal/coolgeoapp:api
+    docker run -d -p 8000:8000 visancal/coolgeoapp:server
 ```
 
 ## Usage
@@ -36,7 +38,8 @@ When the two docker containers are running (API server and spatial database) you
 This link shows the [Swagger UI](https://swagger.io/) of the API, where you can see all the available endpoints of the API and you can test all of them.  
 
 ## Improvements
-xxxxx
+Cache with Redis
+Add a security layer
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
