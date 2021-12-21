@@ -39,8 +39,8 @@ When the two docker containers (API server and spatial database) are running you
 This link shows the API [Swagger UI](https://swagger.io/), where you can see all the available endpoints of the API and you can test all of them.  
 
 ## Improvements
-Cache with Redis
-Add a security layer
+* Cache with Redis
+* Add a security layer
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
