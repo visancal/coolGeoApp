@@ -20,17 +20,23 @@ You have the following options to run this API:
     cd coolGeoApp
     docker-compose up -d --build
 ```
-### 2. Using images from Docker Hub (No available yet)
+### 2. Using images from Docker Hub
+
+* Create a default bridge network
+  
+```bash
+    docker network create coolGeoApp-net
+```
 
 * Run database container 
   
 ```bash
-    docker run -d -p 5432:5432 visancal/coolgeoapp:db
+    docker run -d -p 5432:5432 --name coolGeoApp_db --network coolGeoApp-net visancal/coolgeoapp:db
 ```
 * Run server container
   
 ```bash
-    docker run -d -p 8000:8000 visancal/coolgeoapp:server
+    docker run -d -p 8000:8000 --name coolGeoApp_server --network coolGeoApp-net visancal/coolgeoapp:server
 ```
 
 ## Usage

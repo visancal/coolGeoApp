@@ -1,6 +1,6 @@
 version: '3.3'
 services:
-  server:
+  coolgeoapp_server:
     container_name: coolgeoapp_server
     build:
       context: ./backend
@@ -13,8 +13,8 @@ services:
     ports:
       - 8000:8000
     depends_on:
-      - db
-  db:
+      - coolgeoapp_db
+  coolgeoapp_db:
     container_name: coolgeoapp_db
     image: visancal/coolgeoapp:db
     ports:
