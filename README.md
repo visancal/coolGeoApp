@@ -4,7 +4,7 @@
 It has been developed with [FastAPI](https://fastapi.tiangolo.com/) framework and [Pydantic](https://pydantic-docs.helpmanual.io/) library.
 
 The API runs over a [Uvicorn](https://www.uvicorn.org/) server and the data is stored in a [PostgreSQL](https://www.postgresql.org/) database with the spatial extension [PostGIS](https://postgis.net/).
-Both components, server with API and database, are available as images of [Docker](https://www.docker.com/) to facilitate their instalation and use. You can find them hosted in [Docker Hub](https://hub.docker.com/r/visancal/coolgeoapp)
+Both components, server with API and database, are available as images of [Docker](https://www.docker.com/) to facilitate their instalation and use. You can find them hosted in [Docker Hub](https://hub.docker.com/r/visancal/coolgeoapp/tags)
 
 
 ## Installation
