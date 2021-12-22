@@ -17,15 +17,6 @@ CALCULATE_ACCUMULATED_QUERY = """
     ) as ranges_info;
 """
 
-CALCULATE_TIMESERIES_QUERY = """
-    SELECT sum(ranges_info.amount) as total, json_agg(ranges_info)::text as ranges
-    FROM (
-        SELECT p_age as range, p_gender as gender, sum(amount) as amount         
-        FROM paystats       
-        WHERE p_month >= :startdate and p_month <= :enddate       
-        GROUP BY (p_age,p_gender)
-    ) as ranges_info;
-"""
 
 GET_POSTAL_CODES_GEOM_QUERY = """
     select pc.id,pc.code,ST_AsText(pc.the_geom) as geom, coalesce(stats.total,0) as total

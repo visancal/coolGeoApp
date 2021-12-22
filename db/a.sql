@@ -18,3 +18,6 @@ create table postal_codes (
 CREATE INDEX postal_codes_geom_idx
   ON postal_codes
   USING GIST (the_geom);
+
+CREATE INDEX paystats_p_month
+ON paystats (p_month);
